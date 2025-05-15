@@ -71,6 +71,12 @@ async function salvarContato(){
         alert ('Cadastro realizado com sucesso!!!')
         
     }
+
+   
+}
+
+function preview ({target}){
+    document.getElementById('preview-image').src = URL.createObjectURL(target.files[0])
 }
 exibirContatos()
 
@@ -81,3 +87,4 @@ document.getElementById('novo-contato').addEventListener('click', cadastrarConta
 document.getElementById('cancelar').addEventListener('click', voltarHome)
 
 document.getElementById('salvar').addEventListener('click', salvarContato)
+document.getElementById('foto').addEventListener('change', preview)
